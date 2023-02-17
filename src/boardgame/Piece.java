@@ -15,4 +15,6 @@ public class Piece {
         //poderão acessar o tabuleiro de uma peça
         return board;
     }
+
+
 }

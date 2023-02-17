@@ -27,10 +27,14 @@ public class Board {
         this.columns = columns;
     }
 
-    public Piece pieces(int row, int column){
+    public Piece piece(int row, int column){
         return pieces[row][column];
 
-    }public Piece pieces(Position position) {
+    }public Piece piece(Position position) {
         return pieces[position.getRow()][position.getColumn()];
+    }
+    public void placePiece(Piece piece, Position position){//método responsável por alterar a posição da peça
+        pieces[position.getRow()][position.getColumn()] = piece;//atribui a matriz á peça que foi informada
+        piece.position = position;//acessa a posição da peça
     }
 }
